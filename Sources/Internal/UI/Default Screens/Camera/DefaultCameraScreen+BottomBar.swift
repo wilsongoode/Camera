@@ -50,14 +50,14 @@ private extension DefaultCameraScreen.BottomBar {
         .frame(maxWidth: .infinity, alignment: .leading)
         .transition(.scale)
     }}
-    @ViewBuilder func createCaptureButton() -> some View { if isCaptureButtonActive {
+    @ViewBuilder func createCaptureButton() -> some View { //if isCaptureButtonActive {
         DefaultCameraScreen.CaptureButton(
             outputType: parent.cameraOutputType,
             isRecording: parent.isRecording,
             action: parent.captureOutput
         )
         .transition(.scale)
-    }}
+    }//}
     @ViewBuilder func createChangeCameraPositionButton() -> some View { if isChangeCameraPositionButtonActive {
         BottomButton(
             icon: .mijickIconChangeCamera,
